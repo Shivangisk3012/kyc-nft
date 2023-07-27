@@ -2,14 +2,20 @@ import React from 'react'
 import { useState } from 'react';
 const Create = () => {
 
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled1, setIsToggled1] = useState(false);
+  const [isToggled2, setIsToggled2] = useState(false);
 
 
   const [isArrowUp1, setIsArrowUp1] = useState(false);
   const [isArrowUp2, setIsArrowUp2] = useState(false);
   const [isArrowUp3, setIsArrowUp3] = useState(false);
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
+  const handleToggle1 = () => {
+    setIsToggled1(!isToggled1);
+
+  };
+
+  const handleToggle2 = () => {
+    setIsToggled2(!isToggled2);
 
   };
   // const handleArrow = (index) => {
@@ -87,13 +93,13 @@ const Create = () => {
         </div>
 
 
-        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 px-5 w-[80%] mx-auto h-16 flex justify-between '>
-          <div className='flex gap-8'>
+        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 sm:py-2 px-1 sm:px-5 w-[95%] sm:w-[80%] mx-auto h-22 flex justify-between '>
+          <div className='flex  gap-[1rem]  py-2'>
             <img src='../src/assets/CreateImage/Property.png' className='h-8 w-10' />
-            <div className='flex flex-col gap-2' >
+            <div className='flex flex-col  ' >
 
               <h1 className='text-lg font-bold'>Properties</h1>
-              <h1 className='text-xs'>Textual traits that shows as rectangles </h1>
+              <h1 className='text-[15px] sm:text-xs'>Textual traits that shows as rectangles </h1>
             </div>
           </div>
           <button type='button'
@@ -105,14 +111,13 @@ const Create = () => {
           </button>
         </div>
 
-
-        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 px-5 w-[80%] mx-auto h-16 flex justify-between '>
-          <div className='flex gap-8'>
+        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 sm:py-2 px-1 sm:px-5 w-[95%] sm:w-[80%] mx-auto h-22 flex justify-between '>
+          <div className='flex gap-[1rem] py-2'>
             <img src='../src/assets/CreateImage/star.png' className='h-8 w-10' />
             <div className='flex flex-col gap-2' >
 
               <h1 className='text-lg font-bold'>Levels</h1>
-              <h1 className='text-xs'>Numerical traits that shows as a progress bar </h1>
+              <h1 className='text-[15px] sm:text-xs font-semibold'>Numerical traits that shows as a progress bar </h1>
             </div>
           </div>
           <button type='button'
@@ -125,13 +130,13 @@ const Create = () => {
         </div>
 
 
-        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 px-5 w-[80%] mx-auto h-16 flex justify-between '>
-          <div className='flex gap-8'>
+        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 sm:py-2 px-1 sm:px-5 w-[95%] sm:w-[80%] mx-auto h-22 flex justify-between '>
+          <div className='flex gap-[1rem]'>
             <img src='../src/assets/CreateImage/stats.png' className='h-8 w-10' />
             <div className='flex flex-col gap-2' >
 
               <h1 className='text-lg font-bold'>Levels</h1>
-              <h1 className='text-xs'>Numerical traits that shows as a progress bar </h1>
+              <h1 className='text-[15px] sm:text-xs font-semibold'>Numerical traits that shows as a progress bar </h1>
             </div>
           </div>
           <button type='button'
@@ -143,44 +148,44 @@ const Create = () => {
           </button>
         </div>
 
-        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 px-5 w-[80%] mx-auto h-16 flex justify-between '>
-          <div className='flex gap-8'>
+        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 sm:py-2 px-1 sm:px-5 w-[95%] sm:w-[80%] mx-auto h-22 flex justify-between '>
+          <div className='flex gap-[1rem]'>
             <img src='../src/assets/CreateImage/lock1.png' className='h-8 w-10' />
             <div className='flex flex-col gap-2' >
 
               <h1 className='text-lg font-bold'>Unlockable Content</h1>
-              <h1 className='text-xs'>Only ber revealed by the owner of the item </h1>
+              <h1 className='text-[15px] sm:text-xs font-semibold'>Only ber revealed by the owner of the item </h1>
             </div>
           </div>
           <button
             type="button" // Set the button type to "button" to prevent form submission
-            className='w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white relative overflow-hidden'
-            onClick={handleToggle}
+            className='w-20 sm:w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white relative overflow-hidden'
+            onClick={handleToggle1}
           >
             <div
-              className={`absolute left-1 top-1 w-6 h-6 rounded-full bg-black transition-all ${isToggled ? 'left-8' : 'left-1'
+              className={`absolute left-1 top-1 w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-black transition-all ${isToggled1 ? 'sm:left-8 left-6' :  'sm:left-1 left-2'
                 }`}
             ></div>
           </button>
         </div>
 
-        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 px-5 w-[80%] mx-auto h-16 flex justify-between '>
-          <div className='flex gap-8'>
+        <div className='border-l border-r border-b border-[#CCCCCC] rounded-2xl py-2 sm:py-2 px-1 sm:px-5 w-[95%] sm:w-[80%] mx-auto h-22 flex justify-between '>
+          <div className='flex gap-[1rem]'>
             <img src='../src/assets/CreateImage/board1.png' className='h-8 w-10' />
             <div className='flex flex-col gap-2' >
 
               <h1 className='text-lg font-bold'>Explicit content</h1>
-              <h1 className='text-xs'>Set this as explicit or sensitive content </h1>
+              <h1 className='text-[15px] sm:text-xs font-semibold'>Set this as explicit or sensitive content </h1>
             </div>
           </div>
 
           <button
             type="button" // Set the button type to "button" to prevent form submission
             className='w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white relative overflow-hidden'
-            onClick={handleToggle}
+            onClick={handleToggle2}
           >
             <div
-              className={`absolute left-1 top-1 w-6 h-6 rounded-full bg-black transition-all ${isToggled ? 'left-8' : 'left-1'
+              className={`absolute left-1 top-1 w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-black transition-all ${isToggled2 ? 'sm:left-8 left-6' :  'sm:left-1 left-2'
                 }`}
             ></div>
           </button>
@@ -203,8 +208,8 @@ const Create = () => {
         </div>
 
         <div className='flex flex-col gap-4'>
-          <label >Freeze metadata</label>
-          <h1 className='text-center'>Ferrzing Meta data will allow you to lock your item </h1>
+          <label className='text-lg font-bold' >Freeze metadata</label>
+          <h1 className='text-center text-sm '>Ferrzing Meta data will allow you to lock your item </h1>
           <input type='text' placeholder='To freeze you must create your meta data first ' className='border border-slate-500 rounded-md w-[80%] h-10 mx-auto ' />
         </div>
         <button className='border bg-[#C7F609] w-32 rounded-full text-lg font-bold mx-auto h-10'>Create</button>
