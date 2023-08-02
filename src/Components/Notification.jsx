@@ -26,17 +26,14 @@ const Notification = () => {
       {notificationOptions.map((option) => (
         <div key={option.id} className='px-3 border border-black  w-[90%] md:w-[70%]  rounded-lg flex justify-between items-center '>
           <h1 className='text-base md:font-semibold  font-semibold w-[85%] py-2'>{option.label}</h1>
-          <button
-            className={`w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white relative overflow-hidden 
-            }`}
-            onClick={() => handleToggle(option.id)}
-          >
-            {/* <div
-              className={`absolute left-${toggleState[option.id] ? '7' : '1'} top-1 w-6 h-6 rounded-full bg-black transition-all`}
-            ></div> */}
+              <button
+                className={`w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white relative overflow-hidden 
+                }`}
+                onClick={() => handleToggle(option.id)}
+              >
+      
 
-<div
-              className={`absolute left top-1 w-6 h-6 rounded-full bg-black transition-all ${toggleState[option.id] ? 'left-7' : 'left-1'
+<div className={`absolute left top-1 w-6 h-6 rounded-full bg-black transition-all ${toggleState[option.id] ? 'left-7' : 'left-1'
                 }`}
             ></div>
           </button>

@@ -40,7 +40,7 @@ const Create = () => {
 
 
   return (
-    <main className='py-4 border border-black'>
+    <main className='py-4 border '>
 
       <div className='py-4 relative h-auto' >
         <img src='../src/assets/CreateImage/Rectangle1.png' className=' w-[50%] h-10 absolute right-0 top-8 border-b border-black' />

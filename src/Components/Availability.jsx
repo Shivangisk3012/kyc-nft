@@ -87,8 +87,21 @@
 
 import React from 'react';
 import { AvailabilityData } from '../Constant/AvailabilityData';
+import { useState } from 'react';
 
 const Availability = () => {
+
+  const [toggleState, setToggleState] = useState({});
+
+  const handleToggle = (optionId) => {
+    setToggleState((prevState) => ({
+      ...prevState,
+      [optionId]: !prevState[optionId],
+    }));
+  };
+
+
+  
   return (
     <div className='mx-1 py-8 flex flex-col gap-6 md:gap-6'>
       {AvailabilityData.map((data, index) => (
@@ -111,15 +124,19 @@ const Availability = () => {
             </div>
           )}
 
-          {/* Add a button for index 2 */}
+          {/* Add a button for index 1 and 4 */}
         {(index === 1 || index === 4) && (
-          <div className='absolute right-4 w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white'>
-          <input type='radio' id="id" name='radio' className='hidden' />
-          <label               htmlFor='id'
-            className='absolute left-1 top-1 w-6 h-6 rounded-full bg-black'
-          ></label>
-        </div>
+ <button
+ className={`w-16 h-8 rounded-full border-2 border-[#C7F609] bg-white relative overflow-hidden 
+ }`}
+ onClick={() => handleToggle(data.id)}
+>
 
+
+<div className={`absolute left top-1 w-6 h-6 rounded-full bg-black transition-all ${toggleState[data.id] ? 'left-7' : 'left-1'
+ }`}
+></div>
+</button>
           )}
         </div>
       ))}
@@ -128,3 +145,6 @@ const Availability = () => {
 };
 
 export default Availability;
+
+
+
